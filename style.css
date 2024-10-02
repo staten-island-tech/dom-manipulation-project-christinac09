@@ -1,0 +1,21 @@
+body, html, *{
+    box-sizing: border-box;
+    font-size: 10px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+
+.card {
+    margin: 2rem auto;
+    width: 21%;
+    height: 30rem;
+    border: 2px;
+    border-radius: 15px;
+    background-color: rgb(112, 184, 97);
+}
