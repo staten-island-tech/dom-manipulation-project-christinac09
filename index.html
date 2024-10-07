@@ -7,20 +7,27 @@
 </head>
 <body>
     <h1>Heading</h1>
-    <h2>title</h2>
     <form action="" class="form">
-        <label for="title-input">Name: </label>
-        <input type="text" id="title-input"/>   <!-- types could be text, number, etc. -->
-        <button type="submit" id="title-btn">submit</button>
-        <input type="text" id="desc-input"/>
-        <button type="submit" id="desc-btn">submit</button>
-        <input type="text" id="imgLink-input"/>
-        <button type="submit" id="imgLink-btn">submit</button>
+        <ul>
+            <li>
+            <label for="name-input">Name: </label>
+            <input type="text" id="name-input"/>   <!-- types could be text, number, etc. -->
+            </li>
+            <li>
+            <label for="desc-input">Desc: </label>        
+            <input type="text" id="desc-input"/>
+            </li>
+            <li>
+            <label for="img-input">Image Link: </label>
+            <input type="text" id="img-input"/>
+            </li>
+        </ul>
+        <button type="submit" class="submit-btn">submit</button>
     </form>
     
     <div class="card">
         <h2 class="card-header">card-header</h2>
-        <button class="btn">remove</button>
+        <button class="remove-btn">remove</button>
     </div>
     
     <script src="index.js"></script>
