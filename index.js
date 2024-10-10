@@ -41,4 +41,5 @@ function createCard(album) {
 }
 createCard(getInput());
 
-function removeCard() {}
+function remove() {}
+// buttons.forEach((button)=> button.addEventListener("click", function(event){event.preventDefault(); event.target.parentElement.remove()}))
