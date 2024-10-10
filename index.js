@@ -1,6 +1,6 @@
 const DOMSelectors = {
   header: document.querySelector("h1"),
-  removeButton: document.querySelector(".remove-btn"),
+  removeButtons: document.querySelectorAll(".remove-btn"),
   form: document.querySelector(".form"),
   nameInput: document.querySelector("#name-input"),
   artistInput: document.querySelector("#artist-input"),
@@ -10,7 +10,7 @@ const DOMSelectors = {
 
 function getInput() {
   DOMSelectors.form.addEventListener("submit", function (event) {
-    event.preventDefault(); // default is refresh the page
+    event.preventDefault();
     const newAlbum = {
       name: DOMSelectors.nameInput.value,
       artist: DOMSelectors.artistInput.value,
@@ -19,13 +19,26 @@ function getInput() {
     return newAlbum;
   });
 }
-const a = getInput();
-console.log(a);
-function createCard(album) {
-  DOMSelectors.container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card"><h2 class="card-header">${album.name}</h2><button class="remove-btn">remove</button></div>`
-  );
-}
 
-createCard(a);
+function createCard(album) {
+  DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault(); // default is refresh the page
+    const newAlbum = {
+      name: DOMSelectors.nameInput.value,
+      artist: DOMSelectors.artistInput.value,
+      imageLink: DOMSelectors.imgInput.value,
+    };
+    DOMSelectors.container.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+        <h2 class="card-name">${newAlbum.name}</h2>
+        <h3 class="card-artist">${newAlbum.artist}</h3>
+        <img src="${newAlbum.imageLink}" alt="" class="card-img">
+        <button class="card-removeBtn">Remove</button>
+      </div>`
+    );
+  });
+}
+createCard(getInput());
+
+function removeCard() {}
