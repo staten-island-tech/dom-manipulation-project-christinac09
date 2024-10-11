@@ -2,13 +2,13 @@ const DOMSelectors = {
   header: document.querySelector("h1"),
   removeButtons: document.querySelectorAll(".remove-btn"),
   form: document.querySelector(".form"),
-  nameInput: document.querySelector("#name-input"),
-  artistInput: document.querySelector("#artist-input"),
-  imgInput: document.querySelector("#img-input"),
+  nameInput: document.getElementById("name-input"),
+  artistInput: document.getElementById("artist-input"),
+  imgInput: document.getElementById("img-input"),
   container: document.querySelector(".container"),
 };
 
-function getInput() {
+/* function getInput() {
   DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     const newAlbum = {
@@ -19,7 +19,7 @@ function getInput() {
     return newAlbum;
   });
 }
-
+ */
 function createCard() {
   DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault(); // default is refresh the page
@@ -38,8 +38,13 @@ function createCard() {
       </div>`
     );
   });
-}
-createCard();
+};
 
-function remove() {}
-// buttons.forEach((button)=> button.addEventListener("click", function(event){event.preventDefault(); event.target.parentElement.remove()}))
+function remove() {
+  DOMSelectors.removeButtons.forEach((button) => button.addEventListener("click", function(event){
+    console.log(event.target.parentElement)
+    //event.target.parentElement.remove()
+  }))
+};
+createCard();
+remove()
