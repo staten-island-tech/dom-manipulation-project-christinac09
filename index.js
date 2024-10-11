@@ -25,19 +25,20 @@ function createCard() {
     </div>`
   );
   DOMSelectors.removeButtons = document.querySelectorAll(".card-removeBtn"); // so that it includes the button of the new card
-  //DOMSelectors.allInputs.forEach((input)=>input.value="")
-};
+  DOMSelectors.allInputs.forEach((input) => (input.value = ""));
+}
 
 function removeCard() {
-  DOMSelectors.removeButtons.forEach((button) => button.addEventListener("click",function(event){
-  event.preventDefault();
-  event.target.parentElement.remove()
-}))
-};
+  DOMSelectors.removeButtons.forEach((button) =>
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.target.parentElement.remove();
+    })
+  );
+}
 
-DOMSelectors.form.addEventListener("submit", function (event){
+DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   createCard();
   removeCard();
 });
-
