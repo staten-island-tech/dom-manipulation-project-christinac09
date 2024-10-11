@@ -6,24 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Heading</h1>
-    <form action="" class="form">
-        <ul>
-            <li>
-            <label for="name-input" class="input-label">Name: </label>
-            <input type="text" class="input-value" id="name-input"/>   <!-- types could be text, number, etc. -->
-            </li>
-            <li>
-            <label for="artist-input" class="input-label">Artist: </label>        
-            <input type="text" class="input-value" id="artist-input"/>
-            </li>
-            <li>
-            <label for="img-input" class="input-label">Image Link: </label>
-            <input type="url" class="input-value" id="img-input"/>
-            </li>
-        </ul>
+    <h1 class="heading">Heading</h1>
+    <div class="form-container">
+        <form action="" class="form">
+            <div class="input-box">
+                <label for="name-input" class="input-label">Name: </label>
+                <input type="text" class="input-value" id="name-input"/>
+            </div>
+               <!-- types could be text, number, etc. -->
+            <div class="input-box">
+                <label for="artist-input" class="input-label">Artist: </label>        
+                <input type="text" class="input-value" id="artist-input"/>
+            </div>
+            <div class="input-box">
+                <label for="img-input" class="input-label">Image Link: </label>
+                <input type="url" class="input-value" id="img-input"/>
+            </div>
         <button type="submit" class="submit-btn">submit</button>
-    </form>
+        </form>
+    </div>
     <div class="container">
         <!-- <div class="card">
             <h2 class="card-name">name</h2>

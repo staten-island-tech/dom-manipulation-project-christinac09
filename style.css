@@ -1,13 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&family=Englebert&family=Titan+One&display=swap');
+
 body, html, *{
     box-sizing: border-box;
     font-size: 10px;
     margin: 0 auto;
     padding: 0;
-    text-align: center;
 }
 
-h1 {
-    font-size: 5rem;
+body {
+    background-color: rgb(196, 172, 141);
+}
+
+.heading {
+    text-align: center;
+    font-size: 6rem;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    margin: 2rem auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    margin: 1rem auto;
+}
+.input-label {
+    font-family: "Englebert", cursive;
+    font-size: 3rem;
+}
+.input-value {
+    height: 2.5rem;
+    width: 25rem;
+    font-size: 2rem;
+    font-family: "Slabo 27px", serif;
+    padding: 0.25rem;
 }
 
 .container {
@@ -19,14 +48,27 @@ h1 {
 }
 
 .card {
+    background-color: rgb(148, 121, 85);
     margin: 2rem auto;
     padding: 1rem;
     width: 21%;
     height: 30rem;
     border: 2px;
     border-radius: 15px;
-    background-color: rgb(221, 242, 255);
+    border-color: black;
+    border-width: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+button {
+    height: 5rem;
+    width: 10rem;
+    font-family: "Slabo 27px", serif;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    background-color: rgb(112, 185, 112);
+    border-color: rgb(164, 201, 164);
+    border-style: outset;
 }
