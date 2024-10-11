@@ -20,7 +20,7 @@ function getInput() {
   });
 }
 
-function createCard(album) {
+function createCard() {
   DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault(); // default is refresh the page
     const newAlbum = {
@@ -39,7 +39,7 @@ function createCard(album) {
     );
   });
 }
-createCard(getInput());
+createCard();
 
 function remove() {}
 // buttons.forEach((button)=> button.addEventListener("click", function(event){event.preventDefault(); event.target.parentElement.remove()}))
