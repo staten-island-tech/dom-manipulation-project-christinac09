@@ -40,7 +40,7 @@ form {
 }
 
 .container {
-    margin: 5rem;
+    margin: 5rem auto;
     width: 90%;
     display: flex;
     flex-flow: row wrap;
@@ -51,17 +51,29 @@ form {
     background-color: rgb(148, 121, 85);
     margin: 2rem auto;
     padding: 1rem;
-    width: 21%;
-    height: 30rem;
+    width: 26%;
+    height: 40rem;
     border: 2px;
     border-radius: 15px;
     border-color: black;
     border-width: 3px;
+    font-family: "Englebert", cursive;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
+.card-name {
+    font-size: 3rem;
+}
+.card-artist {
+    font-size: 2.5rem;
+}
+.card-img {
+    height: 80%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+}
 button {
     height: 5rem;
     width: 10rem;
