@@ -1,6 +1,6 @@
 const DOMSelectors = {
   heading: document.querySelector("h1"),
-  removeButtons: document.querySelectorAll(".card-removeBtn"),
+  removeButtons: document.querySelectorAll(".remove-btn"),
   form: document.querySelector(".form"),
   allInputs: document.querySelectorAll(".input-value"),
   nameInput: document.getElementById("name-input"),
@@ -32,10 +32,10 @@ function injectCard(card) {
       <h2 class="card-name">${card.name}</h2>
       <h3 class="card-artist">${card.artist}</h3>
       <img src="${card.imageLink}" alt="" class="card-img">
-      <button class="card-removeBtn">Remove</button>
+      <button class="remove-btn">Remove</button>
     </div>`
   );
-  DOMSelectors.removeButtons = document.querySelectorAll(".card-removeBtn"); // so that it includes the button of the new card
+  DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn"); // so that it includes the button of the new card
 };
 
 function removeCard() {
