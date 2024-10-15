@@ -7,7 +7,6 @@ const DOMSelectors = {
   artistInput: document.getElementById("artist-input"),
   imgInput: document.getElementById("img-input"),
   container: document.querySelector(".container"),
-  cards: document.querySelectorAll(".card"),
 };
 
 function makeAlbum() {
