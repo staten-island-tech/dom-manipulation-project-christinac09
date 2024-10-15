@@ -9,8 +9,8 @@ body, html, *{
 
 body {
     background-color: rgb(188 180 207);
-    background-image: linear-gradient(rgba(188, 180, 207, 0.75),rgba(188, 180, 207, 0.75)),url("img/snowfall3.jpg");
-    background-size: 100%;
+    /* background-image: linear-gradient(rgba(188, 180, 207, 0.75),rgba(188, 180, 207, 0.75)),url("img/snowfall3.jpg"); */
+    /* background-size: 100%; */
 }
 
 .heading {
@@ -55,7 +55,6 @@ form {
 
 .card {
     background-color: rgb(161, 161, 191);
-    /* background-color: rgb(165 172 217) */
     margin: 2rem auto;
     padding: 1.2rem;
     width: 26%;

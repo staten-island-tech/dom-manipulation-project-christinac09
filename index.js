@@ -7,9 +7,10 @@ const DOMSelectors = {
   artistInput: document.getElementById("artist-input"),
   imgInput: document.getElementById("img-input"),
   container: document.querySelector(".container"),
+  cards: document.querySelectorAll(".card"),
 };
 
-function createCard() {
+function makeAlbum() {
   const newAlbum = {
     name: DOMSelectors.nameInput.value,
     artist: DOMSelectors.artistInput.value,
@@ -17,15 +18,13 @@ function createCard() {
   };
   // check if all input fields are filled out
   if (!checkIfFilled(newAlbum)) {
-    return
+    return;
   }
   console.log(newAlbum);
-  removeInput();
-  injectCard(newAlbum);
-  removeCard();
-};
+  return newAlbum;
+}
 
-function injectCard(card) {
+function addCard(card) {
   DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
@@ -35,37 +34,42 @@ function injectCard(card) {
       <button class="remove-btn">Remove</button>
     </div>`
   );
-  DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn"); // so that it includes the button of the new card
-};
+}
 
-function removeCard() {
+function addRemoveButtons() {
+  DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn");
   DOMSelectors.removeButtons.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       event.preventDefault();
       event.target.parentElement.remove();
     })
   );
-};
+}
 
-function removeInput() {
+function removeInputs() {
   DOMSelectors.allInputs.forEach((input) => (input.value = ""));
 }
 
-function checkIfFilled(object) {
+/* function checkIfFilled(object) {
   const inputs = Object.values(object);
-  let counter=0;
-  inputs.forEach((value) => {if (value==="") {
-    counter += 1
-  }});
-  if (counter>0) {
-    alert("Please fill out ALL input fields")
-    return false
+  let counter = 0;
+  inputs.forEach((value) => {
+    if (value === "") {
+      counter += 1;
+    }
+  });
+  if (counter > 0) {
+    alert("Please fill out ALL input fields");
+    return false;
   } else {
-    return true
+    return true;
   }
-}
+} */
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
-  createCard();
+  const Album = makeAlbum();
+  addCard(Album);
+  removeInputs();
+  addRemoveButtons();
 });
