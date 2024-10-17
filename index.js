@@ -41,11 +41,8 @@ function addRemoveButtons() {
   let currentRemoveBtn = document.getElementById(`btn-${currentId}`);
   currentRemoveBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    if (event.target.parentElement === currentCard) {
-      event.target.parentElement.remove();
-    } else {
-      alert("something is wrong with addRemoveButtons function");
-    }
+    //event.target.parentElement.remove(); <-- alt method
+    currentCard.remove();
   });
 }
 
