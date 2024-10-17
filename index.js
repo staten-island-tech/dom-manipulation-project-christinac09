@@ -8,7 +8,7 @@ const DOMSelectors = {
   imgInput: document.getElementById("img-input"),
   container: document.querySelector(".container"),
 };
-
+let idCounter = 0;
 function makeAlbum() {
   const newAlbum = {
     name: DOMSelectors.nameInput.value,
@@ -16,9 +16,9 @@ function makeAlbum() {
     imageLink: DOMSelectors.imgInput.value,
   };
   // check if all input fields are filled out
-  if (!checkIfFilled(newAlbum)) {
+  /* if (!checkIfFilled(newAlbum)) {
     return;
-  }
+  } */
   console.log(newAlbum);
   return newAlbum;
 }
@@ -26,23 +26,27 @@ function makeAlbum() {
 function addCard(card) {
   DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
-    `<div class="card">
+    `<div class="card" id="card-${idCounter}">
       <h2 class="card-name">${card.name}</h2>
       <h3 class="card-artist">${card.artist}</h3>
       <img src="${card.imageLink}" alt="" class="card-img">
-      <button class="remove-btn">Remove</button>
+      <button class="remove-btn" id="btn-${idCounter}">Remove</button>
     </div>`
   );
 }
 
 function addRemoveButtons() {
-  DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn");
-  DOMSelectors.removeButtons.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      event.preventDefault();
+  let currentId = idCounter;
+  let currentCard = document.getElementById(`card-${currentId}`);
+  let currentRemoveBtn = document.getElementById(`btn-${currentId}`);
+  currentRemoveBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (event.target.parentElement === currentCard) {
       event.target.parentElement.remove();
-    })
-  );
+    } else {
+      alert("something is wrong with addRemoveButtons function");
+    }
+  });
 }
 
 function removeInputs() {
@@ -58,7 +62,7 @@ function removeInputs() {
     }
   });
   if (counter > 0) {
-    alert("Please fill out ALL input fields");
+    alert("HEY. fill out ALL input fields");
     return false;
   } else {
     return true;
@@ -68,6 +72,7 @@ function removeInputs() {
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   const Album = makeAlbum();
+  idCounter += 1;
   addCard(Album);
   removeInputs();
   addRemoveButtons();
