@@ -62,16 +62,16 @@ form {
     border: 4px solid rgb(130 137 175);
     border-radius: 15px;
     font-family: "Englebert", cursive;
-    box-shadow: 12px 12px 5px 1px rgba(59, 77, 121, 0.653);
+    /* box-shadow: 12px 12px 5px 1px rgba(59, 77, 121, 0.653); */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     transition: all 0.5s;
 }
-.card:hover {    
+/* .card:hover {    
     transform: scale(1.1);
     box-shadow: 10px 20px 10px 10px rgba(59, 77, 121, 0.408);
-}
+} */
 .card-name {
     font-size: 3rem;
 }
