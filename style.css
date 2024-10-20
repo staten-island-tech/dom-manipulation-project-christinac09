@@ -77,9 +77,11 @@ form {
 
 .card-name {
     font-size: 3rem;
+    color: #343676;
 }
 .card-artist {
     font-size: 2.5rem;
+    color: #343676;
 }
 .card-img {
     height: 65%;
