@@ -1,5 +1,4 @@
 const DOMSelectors = {
-  heading: document.querySelector("h1"),
   removeButtons: document.querySelectorAll(".remove-btn"),
   form: document.querySelector(".form"),
   allInputs: document.querySelectorAll(".input-value"),
@@ -8,6 +7,7 @@ const DOMSelectors = {
   imgInput: document.getElementById("img-input"),
   container: document.querySelector(".container"),
 };
+
 let idCounter = 0;
 function makeAlbum() {
   const newAlbum = {
@@ -16,9 +16,9 @@ function makeAlbum() {
     imageLink: DOMSelectors.imgInput.value,
   };
   // check if all input fields are filled out
-  /* if (!checkIfFilled(newAlbum)) {
+  if (!checkIfFilled(newAlbum)) {
     return;
-  } */
+  }
   console.log(newAlbum);
   return newAlbum;
 }
@@ -57,21 +57,21 @@ function removeInputs() {
   DOMSelectors.allInputs.forEach((input) => (input.value = ""));
 }
 
-/* function checkIfFilled(object) {
+function checkIfFilled(object) {
   const inputs = Object.values(object);
-  let counter = 0;
+  let valid = true;
   inputs.forEach((value) => {
     if (value === "") {
-      counter += 1;
+      valid = false;
     }
   });
-  if (counter > 0) {
+  if (!valid) {
     alert("HEY. fill out ALL input fields");
     return false;
   } else {
     return true;
   }
-} */
+}
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();

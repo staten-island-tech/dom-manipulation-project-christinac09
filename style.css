@@ -8,7 +8,7 @@ body, html, *{
 }
 
 body {
-    background-color: rgb(188 180 207);
+    background-color: #d5dcfa;
     /* background-image: linear-gradient(rgba(188, 180, 207, 0.75),rgba(188, 180, 207, 0.75)),url("img/snowfall3.jpg"); */
     /* background-size: 100%; */
 }
@@ -18,52 +18,54 @@ body {
     font-size: 6rem;
     font-family: "Titan One", sans-serif;
     font-weight: 400;
-    color: rgb(53, 15, 94);
+    color: #3a3c84;
     margin: 2rem auto;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    border: 3px double rgb(53, 15, 94);
+    align-items: center;
+    border: 3px double #7199ce;
     width: 50%;
     padding: 2rem;
 }
 
 .input-box {
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     border-radius: 5px;
 }
 .input-label {
     font-family: "Englebert", cursive;
     font-size: 3rem;
-    color: rgb(59, 36, 112);
+    color: #3a3c84;
 }
 .input-value {
-    height: 2.5rem;
-    width: 25rem;
+    height: 3.5rem;
+    width: 27rem;
     font-size: 2rem;
     font-family: "Slabo 27px", serif;
     padding: 0.25rem;
+    border: 2px solid #7199ce;
+    border-radius: 5px;
 }
 
 .container {
     margin: 5rem auto;
     padding: 2rem;
     width: 90%;
-    border: 5px rgb(130 137 175);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .card {
-    background-color: rgb(161, 161, 191);
+    background-color: #7199ce;
     margin: 2rem auto;
     padding: 1.2rem;
     width: 26%;
     height: 40rem;
-    border: 4px solid rgb(130 137 175);
+    border: 4px solid #3a3c84;
     border-radius: 15px;
     font-family: "Englebert", cursive;
     box-shadow: 0px 0px 5px 5px rgba(59, 77, 121, 0.3);
@@ -92,12 +94,13 @@ button {
     transition: 0.3s;
 }
 .submit-btn {
-    height: 5rem;
-    width: 10rem;
+    height: 5.5rem;
+    width: 11rem;
     font-size: 2.5rem;
     margin: 2rem auto;
     background-color: rgb(81 112 191);
     border-color: rgb(120, 138, 184);
+    color: rgba(255, 255, 255,0.8);
 }
 .remove-btn {
     height: 9%;
