@@ -34,7 +34,7 @@ function addCard(card) {
     </div>`
   );
 }
-
+// this one ONLY addseventlistener to the button that was just created
 function addRemoveButtons() {
   let currentId = idCounter;
   let currentCard = document.getElementById(`card-${currentId}`);
@@ -45,7 +45,14 @@ function addRemoveButtons() {
     currentCard.remove();
   });
 }
-
+// this one addseventlistener to ALL remove buttons EACH time a new card is created
+/* function addRemoveButtons2() {
+  DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn");
+  DOMSelectors.removeButtons.forEach((button)=>{button.addEventListener("click", function(event) {
+    event.preventDefault();
+    event.target.parentElement.remove()
+  })})
+} */
 function removeInputs() {
   DOMSelectors.allInputs.forEach((input) => (input.value = ""));
 }
@@ -69,7 +76,7 @@ function removeInputs() {
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   const Album = makeAlbum();
-  idCounter += 1;
+  idCounter += 1; // for targetting specific card & button in addRemoveButtons function
   addCard(Album);
   removeInputs();
   addRemoveButtons();

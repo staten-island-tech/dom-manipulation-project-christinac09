@@ -25,10 +25,14 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    border: 3px double rgb(53, 15, 94);
+    width: 50%;
+    padding: 2rem;
 }
 
 .input-box {
     margin: 1rem auto;
+    border-radius: 5px;
 }
 .input-label {
     font-family: "Englebert", cursive;
@@ -62,16 +66,13 @@ form {
     border: 4px solid rgb(130 137 175);
     border-radius: 15px;
     font-family: "Englebert", cursive;
-    /* box-shadow: 12px 12px 5px 1px rgba(59, 77, 121, 0.653); */
+    box-shadow: 0px 0px 5px 5px rgba(59, 77, 121, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     transition: all 0.5s;
 }
-/* .card:hover {    
-    transform: scale(1.1);
-    box-shadow: 10px 20px 10px 10px rgba(59, 77, 121, 0.408);
-} */
+
 .card-name {
     font-size: 3rem;
 }
@@ -110,4 +111,20 @@ button {
 button:hover {
     background-color: rgb(165 172 217);
     color: black;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1300px) {
+    .card {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 750px){
+    .card {
+        width: 100%; /* has to be less than 50% (which is half of container bc of margin & spacing */
+    }
+    .container {
+        flex-direction: column;
+        padding: 6rem;
+    }
 }
