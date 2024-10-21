@@ -9,8 +9,8 @@ body, html, *{
 
 body {
     background-color: #d5dcfa;
-    background-image: linear-gradient(rgba(213, 220, 250, 0.5),rgba(213, 220, 250, 0.5)),url("img/snowfall2.jpg");
-    background-size: 100%;
+    /* background-image: linear-gradient(rgba(213, 220, 250, 0.5),rgba(213, 220, 250, 0.5)),url("img/snowfall2.jpg");
+    background-size: 100%; */
 }
 
 .heading {
