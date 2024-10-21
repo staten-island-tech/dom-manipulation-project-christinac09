@@ -9,8 +9,8 @@ body, html, *{
 
 body {
     background-color: #d5dcfa;
-    /* background-image: linear-gradient(rgba(188, 180, 207, 0.75),rgba(188, 180, 207, 0.75)),url("img/snowfall3.jpg"); */
-    /* background-size: 100%; */
+    background-image: linear-gradient(rgba(213, 220, 250, 0.5),rgba(213, 220, 250, 0.5)),url("img/snowfall2.jpg");
+    background-size: 100%;
 }
 
 .heading {
@@ -19,16 +19,19 @@ body {
     font-family: "Titan One", sans-serif;
     font-weight: 400;
     color: #3a3c84;
-    margin: 2rem auto;
+    margin: 2.2rem auto;
 }
 
+.form-container {
+    border: 3px double #7199ce;
+    width: 50%;
+    padding: 2rem;
+}
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px double #7199ce;
-    width: 50%;
-    padding: 2rem;
+    
 }
 
 .input-box {
@@ -93,11 +96,11 @@ button {
     margin: 1rem auto;
     font-family: "Slabo 27px", serif;
     border-style: outset;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .submit-btn {
     height: 5.5rem;
-    width: 11rem;
+    width: 17%;
     font-size: 2.5rem;
     margin: 2rem auto;
     background-color: rgb(81 112 191);
@@ -118,6 +121,9 @@ button:hover {
     color: black;
     transform: scale(1.05);
 }
+button:active {
+    transform: scale(0.95);
+}
 
 @media screen and (max-width: 1300px) {
     .card {
@@ -131,5 +137,14 @@ button:hover {
     .container {
         flex-direction: column;
         padding: 6rem;
+    }
+    .form-container {
+        width: 90%;
+    }
+    .input-value {
+        width: 20rem;
+    }
+    .remove-btn {
+        width: 30%;
     }
 }

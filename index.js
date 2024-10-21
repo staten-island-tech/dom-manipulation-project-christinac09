@@ -27,14 +27,14 @@ function addCard(card) {
   DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class="card" id="card-${idCounter}">
-      <h2 class="card-name">${card.name}</h2>
-      <h3 class="card-artist">${card.artist}</h3>
+      <h2 class="card-name" id="card-name-${idCounter}">${card.name}</h2>
+      <h3 class="card-artist" id="card-artist-${idCounter}">${card.artist}</h3>
       <img src="${card.imageLink}" alt="" class="card-img">
       <button class="remove-btn" id="btn-${idCounter}">Remove</button>
     </div>`
   );
 }
-// this one ONLY addseventlistener to the button that was just created
+// this one ONLY addseventlistener to the button that was just created (DOESNT WORK FOR BTNS THAT WERE ALR IN HTML FILE)
 function addRemoveButtons() {
   let currentId = idCounter;
   let currentCard = document.getElementById(`card-${currentId}`);
@@ -45,6 +45,7 @@ function addRemoveButtons() {
     currentCard.remove();
   });
 }
+
 // this one addseventlistener to ALL remove buttons EACH time a new card is created
 /* function addRemoveButtons2() {
   DOMSelectors.removeButtons = document.querySelectorAll(".remove-btn");
@@ -53,6 +54,7 @@ function addRemoveButtons() {
     event.target.parentElement.remove()
   })})
 } */
+
 function removeInputs() {
   DOMSelectors.allInputs.forEach((input) => (input.value = ""));
 }
